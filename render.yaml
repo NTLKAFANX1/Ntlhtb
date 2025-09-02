@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: data-scraper
+    env: node
+    plan: free
+    buildCommand: node scripts/build-all.mjs
+    startCommand: node start-production.js
+    envVars:
+      - key: NODE_ENV
+        value: production
